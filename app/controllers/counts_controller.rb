@@ -69,6 +69,6 @@ class CountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def count_params
-      params.require(:count).permit(:name, :description, :count, :goal)
+      params.require(:count).permit(:name, :description, :count, :goal, :image)
     end
 end
