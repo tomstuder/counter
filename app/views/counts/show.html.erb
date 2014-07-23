@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @count.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @count.description %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @count.count %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @count.goal %>
+</p>
+
+<!-- May need variable set for current % -->
+<!-- How does it account for cound ID? Knows what it is dividing? -->
+<p>You have reached <b><%= @count.count %>%</b> of your goal. // Displaying count, need division</p>
+
+
+<%= link_to 'Edit', edit_count_path(@count) %> |
+<%= link_to 'Back', counts_path %>
