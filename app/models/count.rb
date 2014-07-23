@@ -3,7 +3,7 @@ class Count < ActiveRecord::Base
   belongs_to :user
 
   def pct
-     count / goal
+    count.to_f / goal.to_f * 100
   end
 
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
