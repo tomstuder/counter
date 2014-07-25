@@ -20,9 +20,9 @@
         <td><%= count.description %></td>
         <td><%= count.count %></td>
         <td><%= count.goal %></td>
-        <td><%= link_to 'Show', count %></td>
-        <td><%= link_to 'Edit', edit_count_path(count) %></td>
-        <td><%= link_to 'Destroy', count, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button><%= link_to 'Show', count %></button></td>
+        <td><button><%= link_to 'Edit', edit_count_path(count) %></button></td>
+        <td><button><%= link_to 'Destroy', count, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'Count another Activity', new_count_path %>
-<%= link_to "sign out", destroy_user_session_path, method: :delete %>
+<button><%= link_to 'New Count', new_count_path %></button>
+<button><%= link_to "sign out", destroy_user_session_path, method: :delete %></button>
