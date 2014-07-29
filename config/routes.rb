@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+  get 'pages/faq'
+
   devise_for :users
   resources :counts
 
