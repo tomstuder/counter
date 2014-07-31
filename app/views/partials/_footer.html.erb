@@ -1,0 +1,7 @@
+<footer>
+  <ul>
+    <li><%=link_to "about", pages_about_path %> </li>
+    <li><%=link_to "faq", pages_faq_path %></li>
+    <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+  </ul>
+</footer>

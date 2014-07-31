@@ -1,3 +1,23 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+footer {
+  border-top: 1px solid lighten(#000000, 50%);
+  ul {
+    li {
+      list-style-type: none;
+      display: inline;
+      a {
+        color: #000000;
+        text-decoration: none;
+        &:visited {
+          color: lighten(#000000, 50%);
+        }
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
