@@ -1,0 +1,14 @@
+footer {
+  ul {
+    li {
+      list-style-type: none;
+      display: inline;
+      a {
+        color: $blue;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
