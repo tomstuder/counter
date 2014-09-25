@@ -1,32 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-<%= image_tag @count.image.url(:medium) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= @count.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @count.description %>
-</p>
+<div class="show-content">
+<!--     <strong>Image:</strong> -->
+  <%= image_tag @count.image.url(:medium) %>
 
-<p>
-  <strong>Count:</strong>
-  <%= @count.count %>
-</p>
+  <div class="count-content">
+    <p>
+      <strong>Im counting:</strong>
+      <%= @count.name.pluralize %>
+    </p>
 
-<p>
-  <strong>Goal:</strong>
-  <%= @count.goal %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @count.description %>
+    </p>
 
-<!-- May need variable set for current % -->
+    <p>
+      <strong>Current Count:</strong>
+      <%= @count.count %>
+    </p>
+
+    <p>
+      <strong>My Goal:</strong>
+      <%= @count.goal %>
+    </p>
+  </div>
+  <!-- May need variable set for current % -->
 <!-- How does it account for cound ID? Knows what it is dividing? -->
-<p>You have reached <b><%= @count.pct.round %>%</b> of your goal.</p>
+<p><strong>I have reached</strong> <b><%= @count.pct.round %>%</b> of your goal.</p>
 
 <button><%= link_to 'Edit', edit_count_path(@count) %></button> |
 <button><%= link_to 'Back', counts_path %></button>
+</div>
+
+

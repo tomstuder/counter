@@ -1,11 +1,4 @@
-$white: #ffffff;
-$black: #000000;
-$gray: #e2e2e2;
-$ltblue: #049CD4;
-$green: #04D49A;
-$brightgreen: #04F66F;
 
-$opacity: 20%;
 
 @mixin full-width { //overrides site width for full bleed
     width: 111.5%;
@@ -22,13 +15,12 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: $ltblue;
+  // background-color: $ltblue;
 
   .container {
     min-height: 100%;
     padding-bottom: 40px;
     padding-top: 0px;
-    background-color: $gray;
     margin: 0 auto;
     width: 90%;
     }
@@ -37,10 +29,44 @@ body {
       overflow-x: hidden;
       padding-bottom: 40px;
       background-color: #c2c2c2;
-
     }
   footer {
-    background-color: $green;
+    background-color: $ltblue;
     height: 40px;
   }
 }
+
+// SHOW CONTENT
+div.show-content {
+  @include clear-float;
+    background-color: $gray;
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+  .count-content {
+    float: left;
+    width: 50%;
+  }
+}
+
+button {
+    color: $black;
+    background-color: $gray;
+    border: none;
+    @include border-radius (4px);
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  &:hover {
+    background-color: darken($gray, 40%);
+    a {
+      color: white;
+    }
+    }
+}
+
+  .count-section {
+    // background-color: $gray;
+  }
