@@ -15,8 +15,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'compass-rails'
 
-# Sassy Buttons
-gem 'sassy-buttons'
+# Foundation
+gem 'foundation-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

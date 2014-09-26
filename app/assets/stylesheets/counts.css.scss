@@ -1,45 +1,45 @@
-// Place all the styles related to the Counts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the Counts controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$white: #ffffff;
+// $white: #ffffff;
 
-@mixin radius {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
+// @mixin radius {
+//   -webkit-border-radius: 5px;
+//   -moz-border-radius: 5px;
+//   border-radius: 5px;
+// }
 
-body {
-  h1 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
-    font-size: 4em;
-    line-height: 1em;
-  }
+// body {
+//   h1 {
+//     font-family: 'Lato', sans-serif;
+//     font-weight: 100;
+//     font-size: 4em;
+//     line-height: 1em;
+//   }
 
-  p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-  }
+//   p {
+//     font-family: 'Lato', sans-serif;
+//     font-weight: 400;
+//   }
 
-  th {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-}
-  button {
-    background-color: #c2c2c2;
-    &:hover {
-      background-color: #e2e2e2;
-      a {
-        color: #c2c2c2;
-      }
-    }
-    @include radius;
-    border: none;
-    a {
-    text-decoration: none;
-    padding: 5px;
-    }
-  }
-}
+//   th {
+//     font-family: 'Lato', sans-serif;
+//     font-weight: 700;
+// }
+//   button {
+//     background-color: #c2c2c2;
+//     &:hover {
+//       background-color: #e2e2e2;
+//       a {
+//         color: #c2c2c2;
+//       }
+//     }
+//     @include radius;
+//     border: none;
+//     a {
+//     text-decoration: none;
+//     padding: 5px;
+//     }
+//   }
+// }

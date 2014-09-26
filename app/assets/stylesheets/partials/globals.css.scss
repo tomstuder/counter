@@ -1,140 +1,140 @@
-$white: #ffffff;
-$black: #000000;
-$gray: #e2e2e2;
-$ltblue: #049CD4;
-$green: #04D49A;
-$brightgreen: #04F66F;
+// $white: #ffffff;
+// $black: #000000;
+// $gray: #e2e2e2;
+// $ltblue: #049CD4;
+// $green: #04D49A;
+// $brightgreen: #04F66F;
 
-$opacity: 20%;
-
-
-
-@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.3){
-  font-size: ($sizeValue * 1) + px;
-  line-height: ($line * 1) + px;
-  font-size: ($sizeValue / 10) + rem;
-  line-height: ($line / 10) + rem;
-}
-
-@mixin respond-to($media) {
-  @if $media == xsmall {
-    @media only screen and (min-width: 440px){ @content; }
-  }
-  @if $media == small {
-    @media only screen and (min-width: 640px){ @content; }
-  }
-  @else if $media == medium {
-    @media only screen and (min-width: 950px){ @content; }
-  }
-  @else if $media == large {
-    @media only screen and (min-width: 1030px){ @content; }
-  }
-  @else if $media == display {
-    @media only screen and (min-width: 1280px){ @content; }
-  }
-}
-
-@mixin image-2x($image, $width, $height){
-  @media (min--moz-device-pixel-ratio: 1.3),
-         (-o-min-device-pixel-ratio: 2.6/2),
-         (-webkit-min-device-pixel-ratio: 1.3),
-         (min-device-pixel-ratio: 1.3),
-         (min-resolution: 1.3dppx){
-
-    background-image: url($image);
-    background-size: $width $height;
-  }
-}
-
-@mixin gradient($image, $gradient){
-  @include background ($image);
-  @include background ($gradient);
-}
-
-@mixin clear-float{
-  &:before, &:after{
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-  }
-  &:after{
-    clear: both;
-  }
-}
+// $opacity: 20%;
 
 
-@mixin vertical-align-middle {
-  display: inline-block;
-  vertical-align: middle;
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
-  }
-}
 
-@mixin hide-text {
-  display: block;
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
-}
+// @mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.3){
+//   font-size: ($sizeValue * 1) + px;
+//   line-height: ($line * 1) + px;
+//   font-size: ($sizeValue / 10) + rem;
+//   line-height: ($line / 10) + rem;
+// }
 
-// $sprite: image-url("wireframe_sprite.png") no-repeat;
+// @mixin respond-to($media) {
+//   @if $media == xsmall {
+//     @media only screen and (min-width: 440px){ @content; }
+//   }
+//   @if $media == small {
+//     @media only screen and (min-width: 640px){ @content; }
+//   }
+//   @else if $media == medium {
+//     @media only screen and (min-width: 950px){ @content; }
+//   }
+//   @else if $media == large {
+//     @media only screen and (min-width: 1030px){ @content; }
+//   }
+//   @else if $media == display {
+//     @media only screen and (min-width: 1280px){ @content; }
+//   }
+// }
 
-@mixin sprite-hover($idle-x, $position-y, $hover-x) {
-background: $sprite;
-background-position: $idle-x $position-y;
-  &:hover {
-  background-position: $hover-x $position-y;
-  }
-}
+// @mixin image-2x($image, $width, $height){
+//   @media (min--moz-device-pixel-ratio: 1.3),
+//          (-o-min-device-pixel-ratio: 2.6/2),
+//          (-webkit-min-device-pixel-ratio: 1.3),
+//          (min-device-pixel-ratio: 1.3),
+//          (min-resolution: 1.3dppx){
 
-@mixin img-content {
-  content: " ";
-  display: block;
-  background: $sprite;
-  background-repeat: no-repeat;
-}
+//     background-image: url($image);
+//     background-size: $width $height;
+//   }
+// }
+
+// @mixin gradient($image, $gradient){
+//   @include background ($image);
+//   @include background ($gradient);
+// }
+
+// @mixin clear-float{
+//   &:before, &:after{
+//     content: "\0020";
+//     display: block;
+//     height: 0;
+//     overflow: hidden;
+//   }
+//   &:after{
+//     clear: both;
+//   }
+// }
 
 
-@mixin button {
-  position: relative;
-  display: inline-block;
-  width: auto;
-  padding: 7px 15px 7px 15px;
-  background: $lt-blue;
-  color: $white;
-  font-size: 14px;
-  text-transform: lowercase;
-  text-decoration: none;
-  @include border-radius (4px);
-  @include transition(all .5s ease-in-out);
-  &:after {
-    content: "▶";
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    opacity: 0;
-    @include transition(opacity .2s ease-in-out);
-  }
-  &:hover, a:hover {
-    // color: $blue;
-    padding-right: 35px;
-    background: $white;
-    color: $lt-blue;
-    @include transition(all .5s ease-in-out);
-    &:after {
-      opacity: 1;
-      @include transition(opacity .5s .4s ease-in-out);
-    }
-  }
-}
+// @mixin vertical-align-middle {
+//   display: inline-block;
+//   vertical-align: middle;
+//   &:before {
+//     content: '';
+//     display: inline-block;
+//     height: 100%;
+//     vertical-align: middle;
+//     margin-right: -0.25em; /* Adjusts for spacing */
+//   }
+// }
 
-@mixin bottom-rule {
-    border-bottom: solid 1px darken($white, 10%);
-    @include box-shadow(rgba($white, .3) 0px 2px 1px);
-}
+// @mixin hide-text {
+//   display: block;
+//   color: transparent;
+//   font: 0/0 a;
+//   text-shadow: none;
+// }
+
+// // $sprite: image-url("wireframe_sprite.png") no-repeat;
+
+// @mixin sprite-hover($idle-x, $position-y, $hover-x) {
+// background: $sprite;
+// background-position: $idle-x $position-y;
+//   &:hover {
+//   background-position: $hover-x $position-y;
+//   }
+// }
+
+// @mixin img-content {
+//   content: " ";
+//   display: block;
+//   background: $sprite;
+//   background-repeat: no-repeat;
+// }
+
+
+// @mixin button {
+//   position: relative;
+//   display: inline-block;
+//   width: auto;
+//   padding: 7px 15px 7px 15px;
+//   background: $lt-blue;
+//   color: $white;
+//   font-size: 14px;
+//   text-transform: lowercase;
+//   text-decoration: none;
+//   @include border-radius (4px);
+//   @include transition(all .5s ease-in-out);
+//   &:after {
+//     content: "▶";
+//     position: absolute;
+//     top: 8px;
+//     right: 5px;
+//     opacity: 0;
+//     @include transition(opacity .2s ease-in-out);
+//   }
+//   &:hover, a:hover {
+//     // color: $blue;
+//     padding-right: 35px;
+//     background: $white;
+//     color: $lt-blue;
+//     @include transition(all .5s ease-in-out);
+//     &:after {
+//       opacity: 1;
+//       @include transition(opacity .5s .4s ease-in-out);
+//     }
+//   }
+// }
+
+// @mixin bottom-rule {
+//     border-bottom: solid 1px darken($white, 10%);
+//     @include box-shadow(rgba($white, .3) 0px 2px 1px);
+// }

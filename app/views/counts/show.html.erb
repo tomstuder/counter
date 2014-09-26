@@ -1,11 +1,12 @@
+
+<div class="large-12 columns">
+
 <p id="notice"><%= notice %></p>
-
-
 <div class="show-content">
 <!--     <strong>Image:</strong> -->
   <%= image_tag @count.image.url(:medium) %>
 
-  <div class="count-content">
+  <div>
     <p>
       <strong>Im counting:</strong>
       <%= @count.name.pluralize %>
@@ -30,8 +31,10 @@
 <!-- How does it account for cound ID? Knows what it is dividing? -->
 <p><strong>I have reached</strong> <b><%= @count.pct.round %>%</b> of your goal.</p>
 
-<button><%= link_to 'Edit', edit_count_path(@count) %></button> |
-<button><%= link_to 'Back', counts_path %></button>
+<button class="button"><%= link_to 'Edit', edit_count_path(@count) %></button> |
+<button class="button"><%= link_to 'Back', counts_path %></button>
 </div>
+</div>
+
 
 
