@@ -4,7 +4,7 @@ class CountsController < ApplicationController
   # GET /counts
   # GET /counts.json
   def index
-    @counts = Count.all
+    @counts = current_user.counts
   end
 
   # GET /counts/1
@@ -64,11 +64,12 @@ class CountsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_count
-      @count = Count.find(params[:id])
+      @count = current_user.counts.find_by_id(params[:id])
+      raise ActionController::RoutingError.new('Not Found') if @count.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def count_params
-      params.require(:count).permit(:name, :description, :count, :goal, :image)
+      params.require(:count).permit(:name, :description, :count, :goal, :image).merge(:user => current_user)
     end
 end
